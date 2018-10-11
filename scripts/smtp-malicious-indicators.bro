@@ -33,41 +33,41 @@ type smtp_maliciousVal: record {
 
 } 
 
-hook Notice::policy(n: Notice::Info)
-{
-           if ( n$note == Phish::Malicious_URL)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_MD5)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_Attachment)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_Mailfrom)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_Mailto)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_from)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_reply_to)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_subject)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_rcptto)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_Decoded_Subject)
-                 add n$actions[Notice::ACTION_EMAIL];
-
-           if ( n$note == Phish::Malicious_Indicator)
-                 add n$actions[Notice::ACTION_EMAIL];
-}
+# hook Notice::policy(n: Notice::Info)
+# {
+#           if ( n$note == Phish::Malicious_URL)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_MD5)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_Attachment)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_Mailfrom)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_Mailto)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_from)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_reply_to)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_subject)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#          if ( n$note == Phish::Malicious_rcptto)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_Decoded_Subject)
+#                 add n$actions[Notice::ACTION_EMAIL];
+#
+#           if ( n$note == Phish::Malicious_Indicator)
+#                 add n$actions[Notice::ACTION_EMAIL];
+# }
 
 event Input::end_of_data(name: string, source: string)                                                         
 {                                                                         
