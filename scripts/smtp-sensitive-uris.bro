@@ -30,18 +30,18 @@ export {
 
 } 
 
-hook Notice::policy(n: Notice::Info)
-{
-  if ( n$note == Phish::BogusSiteURL)
-  { 	
-	add n$actions[Notice::ACTION_EMAIL];
-  }
-
+# hook Notice::policy(n: Notice::Info)
+# {
+#  if ( n$note == Phish::BogusSiteURL)
+#  { 	
+#	add n$actions[Notice::ACTION_EMAIL];
+#  }
+#
   #if ( n$note == Phish::HTTPSensitivePOST)
   #      {
   #            add n$actions[Notice::ACTION_EMAIL];
   #      }
-}
+# }
 
 event  Phish::process_smtp_urls(c:connection, url:string) 
 { 
